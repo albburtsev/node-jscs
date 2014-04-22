@@ -1,0 +1,13 @@
+{
+  "name": "jscs-config-generator",
+  "version": "0.0.0",
+  "homepage": "https://github.com/mdevils/node-jscs",
+  "authors": [
+    "Alexander Burtsev, http://burtsev.me"
+  ],
+  "license": "MIT",
+  "private": true,
+  "dependencies": {
+    "bootstrap": "~3.1.1"
+  }
+}

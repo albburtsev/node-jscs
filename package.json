@@ -1,0 +1,26 @@
+{
+  "name": "jscs-config-generator",
+  "version": "0.0.0",
+  "description": "",
+  "private": true,
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/mdevils/node-jscs"
+  },
+  "author": "Alexander Burtsev, http://burtsev.me",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mdevils/node-jscs/issues"
+  },
+  "homepage": "https://github.com/mdevils/node-jscs",
+  "devDependencies": {
+    "grunt": "^0.4.4",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-stylus": "^0.14.0",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-contrib-watch": "^0.6.1",
+    "grunt-jscs-checker": "^0.4.1",
+    "matchdep": "^0.3.0"
+  }
+}

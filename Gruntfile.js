@@ -29,6 +29,7 @@ module.exports = function(grunt) {
 
 		jshint: {
 			options: {
+				newcap: false,
 				globals: {
 					jQuery: true
 				}
@@ -64,6 +65,7 @@ module.exports = function(grunt) {
 				src: [
 					'bower_components/jquery/dist/jquery.min.js',
 					'bower_components/bootstrap/dist/js/bootstrap.min.js',
+					'bower_components/markdown/lib/markdown.js',
 					'dist/app.min.js'
 				],
 				dest: 'dist/build.js'

@@ -6,8 +6,8 @@ module.exports = function(grunt) {
 		.forEach(grunt.loadNpmTasks);
 
 	grunt.initConfig({
-		jsSource: 'js/src/*.js',
-		cssSource: 'css/styl/*.styl',
+		jsSource: 'js/*.js',
+		cssSource: 'css/*.styl',
 
 		banner: 
 			'/**\n' +
@@ -22,7 +22,7 @@ module.exports = function(grunt) {
 			},
 			app: {
 				files: {
-					'css/app.css': 'css/app.styl'
+					'dist/app.css': 'css/app.styl'
 				}
 			}
 		},
@@ -49,7 +49,7 @@ module.exports = function(grunt) {
 			},
 			app: {
 				files: {
-					'js/app.min.js': [
+					'dist/app.min.js': [
 						'<%= jsSource %>'
 					]
 				}
@@ -64,16 +64,16 @@ module.exports = function(grunt) {
 				src: [
 					'bower_components/jquery/dist/jquery.min.js',
 					'bower_components/bootstrap/dist/js/bootstrap.min.js',
-					'js/app.min.js'
+					'dist/app.min.js'
 				],
-				dest: 'js/build.js'
+				dest: 'dist/build.js'
 			},
 			css: {
 				src: [
 					'bower_components/bootstrap/dist/css/bootstrap.min.css',
-					'css/app.css'
+					'dist/app.css'
 				],
-				dest: 'css/build.css'
+				dest: 'dist/build.css'
 			}
 		},
 

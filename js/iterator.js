@@ -30,7 +30,9 @@ Iterator.prototype = {
 					if ( item.isHeader() === 3 ) {
 						rule = Rule(item.text());
 						this.rules.push(rule);
-						console.log(rule);
+
+					} else if ( item.isParagraph() ) {
+						// @todo
 					}
 
 					break;

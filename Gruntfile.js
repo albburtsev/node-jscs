@@ -83,11 +83,20 @@ module.exports = function(grunt) {
 		watch: {
 			js: {
 				files: ['<%= jsSource %>'],
-				tasks: ['jshint', 'jscs', 'uglify', 'concat:js']
+				tasks: ['jshint', 'jscs', 'uglify', 'concat:js', 'notify']
 			},
 			css: {
 				files: ['<%= cssSource %>'],
-				tasks: ['stylus', 'concat:css']
+				tasks: ['stylus', 'concat:css', 'notify']
+			}
+		},
+
+		notify: {
+			build_ready: {
+				options: {
+					title: 'JSCS web view',
+					message: 'Build is ready!'
+				}
 			}
 		}
 	});
@@ -98,6 +107,7 @@ module.exports = function(grunt) {
 		'jscs',
 		'uglify',
 		'concat',
+		'notify',
 		'watch'
 	]);
 };

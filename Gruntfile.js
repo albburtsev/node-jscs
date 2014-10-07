@@ -7,7 +7,7 @@ module.exports = function(grunt) {
 
 	grunt.initConfig({
 		jsSource: 'js/*.js',
-		cssSource: 'css/*.styl',
+		cssSource: 'css/**/*.styl',
 
 		banner: 
 			'/**\n' +

@@ -1,0 +1,41 @@
+.card
+	max-width: $width
+	margin: 75px auto 25px
+	padding: 10px 30px 30px 30px
+	background: #EEE
+	text-align: center
+	box-sizing: border-box
+	border-radius: 10px
+
+	&__button
+		position: relative
+
+		&_type_skip
+			margin: 0 5px 0 0
+			padding: 6px 30px
+
+		&_type_add
+			margin: 0 0 0 5px
+			padding: 8px 50px
+
+		&__shortcut
+			position: absolute
+			bottom: -12px
+			display: block
+			padding: 0 5px
+			border: 1px solid #CCC
+			background: #EEE
+			border-radius: 3px
+			color: #666
+			font-size: 10px
+
+@media screen and (max-width: 900px)
+	.card
+
+		&__button
+
+			&_type_skip
+				padding: 6px 15px
+
+			&_type_add
+				padding: 8px 25px

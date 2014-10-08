@@ -1,9 +1,21 @@
 .example
 	display: flex
 	flex-wrap: nowrap
-	justify-content: space-around
+	justify-content: space-between
 	align-items: stretch
 
+	@media screen and (max-width: $mobile-width)
+		display: block
+
 	&__item
-		width: 45%
+		width: 48%
 		text-align: left
+
+		@media screen and (max-width: $mobile-width)
+			width: 100%
+
+		&_valid
+			background: #EEFFEE
+
+		&_invalid
+			background: #FFEEEE

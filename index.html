@@ -23,29 +23,31 @@
 		</div>
 	</div>
 
-	<div class="container card">
-		<h2>requireCurlyBraces</h2>
-		<p>Requires curly braces after statements.</p>
+	<div class="container">
+		<div class="card">
+			<h2>requireCurlyBraces</h2>
+			<p>Requires curly braces after statements.</p>
 
-		<div class="example">
-			<pre class="example__item well">if (x) {
+			<div class="example">
+				<pre class="example__item example__item_valid well">if (x) {
 	x++;
 }			</pre>
-			<pre class="example__item well">if (x) x++;</pre>
-		</div>
+				<pre class="example__item example__item_invalid well">if (x) x++;</pre>
+			</div>
 
-		<p>
-			<span class="btn btn-default card__button card__button_type_skip">Skip
-				<span class="card__button__shortcut">Esc</span>
-			</span>
-			<span class="btn btn-primary card__button card__button_type_add">Add
-				<span class="card__button__shortcut">Enter</span>
-			</span>
-		</p>
+			<p>
+				<span class="btn btn-default card__button card__button_type_skip">Skip it</span>
+				<span class="btn btn-default card__button card__button_type_add">Add this rule</span>
+			</p>
+		</div>
 	</div>
 
-	<pre class="config">{
-	"requireCurlyBraces": ['if', 'else', 'for', 'while', 'do', 'try', 'catch', 'case', 'default']	
+	<div class="cover">
+		<div class="container">
+		<pre class="config">{
+	'requireCurlyBraces': ['if', 'else', 'for', 'while', 'do', 'try', 'catch', 'case', 'default']	
 }</pre>
+		</div>
+	</div>
 </body>
 </html>

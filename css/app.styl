@@ -1,9 +1,5 @@
-html, body
-	margin: 0
-	padding: 0
-
 // @todo: счетчик карточек 1/28
-// @todo: thumb up/down для valid/invalid примеров
+// @todo: thumb up/down для valid/invalid примеров (а лучше подписи valid/invalid в верзнем правом углу)
 // @todo: кнопки выбора возможных значений
 // @todo: название .jscs.json для конфига
 // @todo: кнопка копирования в буфер
@@ -11,7 +7,18 @@ html, body
 // @todo: фон для карточки и шрифт для конфига
 // @todo: анимация пролистывания карточки
 // @todo: кнопки соц. сетей
+// @todo: возможно саму карточку имеет смысл сделать «карточкой», как в http://visionmedia.github.io/nib/
 
-$width = 800px
+$mobile-width = 480px
 
+@import 'nib'
+@import 'styl/card'
 @import 'styl/*'
+
+html, body
+	margin: 0
+	padding: 0
+	background: #EEE
+
+.container
+	max-width: 1000px

@@ -5,6 +5,7 @@
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
 	<title>JSCS config generator</title>
 	<link rel="stylesheet" href="dist/build.css">
+	<link rel="stylesheet" href="css/flaticons/flaticon.css">
 	<script src="dist/build.js"></script>
 </head>
 <body>
@@ -28,15 +29,21 @@
 			<h2 class="card__title js-fit-text"><span>disallowSpaceBeforeBlockStatements</span></h2>
 			<p>Disallows space before block statements (for loops, control structures).</p>
 
-			 <div class="counter">
-			 	<span class="counter__idx">1</span>/<span>27</span>
-			 </div>
+			<div class="counter">
+				<span class="counter__idx">1</span>/<span>27</span>
+			</div>
 
 			<div class="example">
-				<pre class="example__item example__item_valid well">if (x) {
+				<div class="example__item example__item_valid well">
+					<div class="example__label example__label_valid"><i title="Valid" class="flaticon-check52"></i></div>
+					<pre class="example__code">if (x) {
 	x++;
-}			</pre>
-				<pre class="example__item example__item_invalid well">if (x) x++;</pre>
+}					</pre>
+			</div>
+				<div class="example__item example__item_invalid well">
+					<div class="example__label example__label_invalid"><i title="Invalid" class="flaticon-rounded60"></i></div>
+					<pre class="example__code">if (x) x++;</pre>
+				</div>
 			</div>
 
 			<p>

@@ -8,6 +8,7 @@
 		display: block
 
 	&__item
+		position: relative
 		width: 48%
 		text-align: left
 
@@ -19,3 +20,20 @@
 
 		&_invalid
 			background: #FFEEEE
+
+	&__code
+		margin: 0
+		padding: 0
+		background: none
+		border: 0
+
+	&__label
+		position: absolute
+		top: 0
+		right: 5px
+
+		&_valid
+			color: #009900
+
+		&_invalid
+			color: #990000

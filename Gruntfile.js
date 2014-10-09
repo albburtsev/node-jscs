@@ -75,6 +75,7 @@ module.exports = function(grunt) {
 			css: {
 				src: [
 					'bower_components/bootstrap/dist/css/bootstrap.min.css',
+					'css/flaticons/flaticon.css',
 					'dist/app.css'
 				],
 				dest: 'dist/build.css'

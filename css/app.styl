@@ -1,4 +1,3 @@
-// @todo: счетчик карточек 1/28
 // @todo: thumb up/down для valid/invalid примеров (а лучше подписи valid/invalid в верзнем правом углу)
 // @todo: кнопки выбора возможных значений
 // @todo: название .jscs.json для конфига
@@ -9,7 +8,10 @@
 // @todo: кнопки соц. сетей
 // @todo: возможно саму карточку имеет смысл сделать «карточкой», как в http://visionmedia.github.io/nib/
 
+@import url('http://fonts.googleapis.com/css?family=Roboto+Condensed:300italic,400,300&subset=latin,cyrillic-ext')
+
 $mobile-width = 480px
+$card-width = 1000px
 
 @import 'nib'
 @import 'styl/card'
@@ -21,4 +23,4 @@ html, body
 	background: #EEE
 
 .container
-	max-width: 1000px
+	max-width: $card-width

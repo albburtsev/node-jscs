@@ -1,0 +1,15 @@
+.counter
+	position: absolute
+	top: 0
+	right: 0
+	color: rgba(0, 0, 0, .5)
+	font: 300 18px/1.4 'Roboto Condensed', sans-serif
+
+	&__idx
+		transform: tranlateY(10px)
+		font-weight: bold
+		font-size: 24px
+		color: #333
+
+	@media screen and (max-width: $card-width)
+		display: none

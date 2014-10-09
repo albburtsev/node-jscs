@@ -67,6 +67,7 @@ module.exports = function(grunt) {
 					'bower_components/jquery/dist/jquery.min.js',
 					'bower_components/bootstrap/dist/js/bootstrap.min.js',
 					'bower_components/markdown/lib/markdown.js',
+					'bower_components/jquery-textfill/source/jquery.textfill.min.js',
 					'dist/app.min.js'
 				],
 				dest: 'dist/build.js'

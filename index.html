@@ -25,8 +25,12 @@
 
 	<div class="container">
 		<div class="card">
-			<h2>requireCurlyBraces</h2>
-			<p>Requires curly braces after statements.</p>
+			<h2 class="card__title js-fit-text"><span>disallowSpaceBeforeBlockStatements</span></h2>
+			<p>Disallows space before block statements (for loops, control structures).</p>
+
+			 <div class="counter">
+			 	<span class="counter__idx">1</span>/<span>27</span>
+			 </div>
 
 			<div class="example">
 				<pre class="example__item example__item_valid well">if (x) {
@@ -49,5 +53,15 @@
 }</pre>
 		</div>
 	</div>
+
+	<script>
+	jQuery(function() {
+		$('.js-fit-text').textfill({
+			minFontPixels: 10,
+			maxFontPixels: 28,
+			widthOnly: true
+		});
+	});
+	</script>
 </body>
 </html>

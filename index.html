@@ -26,8 +26,8 @@
 
 	<div class="container">
 		<div class="card">
-			<h2 class="card__title js-fit-text"><span>disallowSpaceBeforeBlockStatements</span></h2>
-			<p>Disallows space before block statements (for loops, control structures).</p>
+			<h2 class="card__title js-fit-text"><span>requireCurlyBraces</span></h2>
+			<p>Requires curly braces after statements.</p>
 
 			<div class="counter">
 				<span class="counter__idx">1</span>/<span>27</span>
@@ -46,6 +46,19 @@
 				</div>
 			</div>
 
+			<div class="values well">
+				<h2 class="values__title">Values 
+					<span class="values__controls">
+						<span class="values__control">check all</span> / 
+						<span class="values__control">uncheck all</span>
+					</span>
+				</h2>
+				<ul class="values__list">
+					<li class="value js-value" data-toggle="value_unchecked">if</li>
+					<li class="value js-value" data-toggle="value_unchecked">else</li>
+				</ul>
+			</div>
+
 			<p>
 				<span class="btn btn-default card__button card__button_type_skip">Skip it</span>
 				<span class="btn btn-default card__button card__button_type_add">Add this rule</span>
@@ -59,7 +72,7 @@
 				<div class="config__copy"><i title="Copy to clipboard" class="flaticon-copy1"></i></div>
 				<div class="config__caption">.jscs.json</div>
 				<pre class="config__code">{
-	'requireCurlyBraces': ['if', 'else', 'for', 'while', 'do', 'try', 'catch', 'case', 'default']	
+	"requireCurlyBraces": ["if", "else", "for", "while", "do", "try", "catch", "case", "default"]
 }				</pre>
 			</div>
 		</div>
@@ -71,6 +84,11 @@
 			minFontPixels: 10,
 			maxFontPixels: 28,
 			widthOnly: true
+		});
+
+		$('.js-value').click(function() {
+			var _this = $(this);
+			_this.toggleClass(_this.data('toggle'));
 		});
 	});
 	</script>

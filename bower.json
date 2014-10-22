@@ -11,6 +11,7 @@
     "bootstrap": "~3.2.0",
     "markdown": "~0.5.0",
     "jquery-textfill": "~0.6.0",
-    "swiper": "~2.7.0"
+    "swiper": "~2.7.0",
+    "backbone": "~1.1.2"
   }
 }

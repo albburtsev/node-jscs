@@ -6,7 +6,15 @@ module.exports = function(grunt) {
 		.forEach(grunt.loadNpmTasks);
 
 	grunt.initConfig({
-		jsSource: 'js/*.js',
+		jsSource: [
+			'js/rule.js',
+			'js/iterator.js',
+			'js/mditem.js',
+			'js/rule.model.js',
+			'js/rule.list.js',
+			'js/rule.view.js',
+			'js/app.js'
+		],
 		cssSource: 'css/**/*.styl',
 
 		banner: 
@@ -69,6 +77,8 @@ module.exports = function(grunt) {
 					'bower_components/markdown/lib/markdown.js',
 					'bower_components/jquery-textfill/source/jquery.textfill.min.js',
 					'bower_components/swiper/dist/idangerous.swiper.min.js',
+					'bower_components/underscore/underscore-min.js',
+					'bower_components/backbone/backbone.js',
 					'dist/app.min.js'
 				],
 				dest: 'dist/build.js'

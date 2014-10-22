@@ -25,44 +25,92 @@
 	</div>
 
 	<div class="container">
-		<div class="card">
-			<h2 class="card__title js-fit-text"><span>requireCurlyBraces</span></h2>
-			<p>Requires curly braces after statements.</p>
+		<div class="swiper-container">
+			<div class="swiper-wrapper">
+				<!-- CARD -->
+				<div class="card swiper-slide">
+					<h2 class="card__title js-fit-text"><span>requireCurlyBraces</span></h2>
+					<p>Requires curly braces after statements.</p>
 
-			<div class="counter">
-				<span class="counter__idx">1</span>/<span>27</span>
-			</div>
+					<div class="counter">
+						<span class="counter__idx">1</span>/<span>27</span>
+					</div>
 
-			<div class="example">
-				<div class="example__item example__item_valid well">
-					<div class="example__label example__label_valid"><i title="Valid" class="flaticon-check52"></i></div>
-					<pre class="example__code">if (x) {
+					<div class="example">
+						<div class="example__item example__item_valid well">
+							<div class="example__label example__label_valid"><i title="Valid" class="flaticon-check52"></i></div>
+							<pre class="example__code">if (x) {
 	x++;
-}					</pre>
-			</div>
-				<div class="example__item example__item_invalid well">
-					<div class="example__label example__label_invalid"><i title="Invalid" class="flaticon-do10"></i></div>
-					<pre class="example__code">if (x) x++;</pre>
+}</pre>
+					</div>
+						<div class="example__item example__item_invalid well">
+							<div class="example__label example__label_invalid"><i title="Invalid" class="flaticon-do10"></i></div>
+							<pre class="example__code">if (x) x++;</pre>
+						</div>
+					</div>
+
+					<div class="values well">
+						<h2 class="values__title">Values 
+							<span class="values__controls">
+								<span class="values__control">check all</span> / 
+								<span class="values__control">uncheck all</span>
+							</span>
+						</h2>
+						<ul class="values__list">
+							<li class="value js-value" data-toggle="value_unchecked">if</li>
+							<li class="value js-value" data-toggle="value_unchecked">else</li>
+						</ul>
+					</div>
+
+					<p>
+						<span class="btn btn-default card__button card__button_type_skip">Skip it</span>
+						<span class="btn btn-default card__button card__button_type_add">Add this rule</span>
+					</p>
 				</div>
-			</div>
+				<!-- / CARD -->
 
-			<div class="values well">
-				<h2 class="values__title">Values 
-					<span class="values__controls">
-						<span class="values__control">check all</span> / 
-						<span class="values__control">uncheck all</span>
-					</span>
-				</h2>
-				<ul class="values__list">
-					<li class="value js-value" data-toggle="value_unchecked">if</li>
-					<li class="value js-value" data-toggle="value_unchecked">else</li>
-				</ul>
-			</div>
+				<!-- CARD -->
+				<div class="card swiper-slide" style="width: 100%">
+					<h2 class="card__title js-fit-text"><span>requireCurlyBraces</span></h2>
+					<p>Requires curly braces after statements.</p>
 
-			<p>
-				<span class="btn btn-default card__button card__button_type_skip">Skip it</span>
-				<span class="btn btn-default card__button card__button_type_add">Add this rule</span>
-			</p>
+					<div class="counter">
+						<span class="counter__idx">2</span>/<span>27</span>
+					</div>
+
+					<div class="example">
+						<div class="example__item example__item_valid well">
+							<div class="example__label example__label_valid"><i title="Valid" class="flaticon-check52"></i></div>
+							<pre class="example__code">if (x) {
+	x++;
+}</pre>
+					</div>
+						<div class="example__item example__item_invalid well">
+							<div class="example__label example__label_invalid"><i title="Invalid" class="flaticon-do10"></i></div>
+							<pre class="example__code">if (x) x++;</pre>
+						</div>
+					</div>
+
+					<div class="values well">
+						<h2 class="values__title">Values 
+							<span class="values__controls">
+								<span class="values__control">check all</span> / 
+								<span class="values__control">uncheck all</span>
+							</span>
+						</h2>
+						<ul class="values__list">
+							<li class="value js-value" data-toggle="value_unchecked">if</li>
+							<li class="value js-value" data-toggle="value_unchecked">else</li>
+						</ul>
+					</div>
+
+					<p>
+						<span class="btn btn-default card__button card__button_type_skip">Skip it</span>
+						<span class="btn btn-default card__button card__button_type_add">Add this rule</span>
+					</p>
+				</div>
+				<!-- / CARD -->
+			</div>
 		</div>
 	</div>
 
@@ -89,6 +137,14 @@
 		$('.js-value').click(function() {
 			var _this = $(this);
 			_this.toggleClass(_this.data('toggle'));
+		});
+
+		var mySwiper = new Swiper('.swiper-container', {
+			mode:'horizontal',
+			calculateHeight: true,
+			simulateTouch: false,
+			keyboardControl: true,
+			loop: false
 		});
 	});
 	</script>

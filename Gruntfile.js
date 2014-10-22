@@ -68,6 +68,7 @@ module.exports = function(grunt) {
 					'bower_components/bootstrap/dist/js/bootstrap.min.js',
 					'bower_components/markdown/lib/markdown.js',
 					'bower_components/jquery-textfill/source/jquery.textfill.min.js',
+					'bower_components/swiper/dist/idangerous.swiper.min.js',
 					'dist/app.min.js'
 				],
 				dest: 'dist/build.js'
@@ -75,6 +76,7 @@ module.exports = function(grunt) {
 			css: {
 				src: [
 					'bower_components/bootstrap/dist/css/bootstrap.min.css',
+					'bower_components/swiper/dist/idangerous.swiper.css',
 					'css/flaticons/flaticon.css',
 					'dist/app.css'
 				],

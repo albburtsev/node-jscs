@@ -28,23 +28,41 @@ jQuery(function($) {
 		el: $('.js-app'),
 
 		initialize: function(rules) {
+			this._rules = this.$('.js-rules');
+			this._swiper = this.$('.js-swiper');
+
 			this.list = new RuleList();
 			this.listenTo(this.list, 'add', this.addRule);
 			this.list.add(rules);
 
-			// Inits swiper
-			var mySwiper = new Swiper('.swiper-container', {
+			this.initSwiper();
+		},
+
+		initSwiper: function() {
+			new Swiper(this._swiper.get(0), {
 				mode: 'horizontal',
 				calculateHeight: true,
 				simulateTouch: false,
 				keyboardControl: true,
-				loop: false
+				loop: false,
+				onFirstInit: this.fitSwiperHeight.bind(this),
+				onSlideChangeEnd: this.fitSwiperHeight.bind(this)
 			});
 		},
 
 		addRule: function(model) {
 			var view = new RuleView({ model: model });
-			this.$el.append(view.render().el);
+			this._rules.append(view.render().el);
+			view.trigger('added');
+		},
+
+		fitSwiperHeight: function(swiper) {
+			var _slide = $(swiper.activeSlide()),
+				height;
+
+			_slide.css('height', 'auto');
+			height = _slide.height();
+			this._rules.css('height', height);
 		}
 	});
 });

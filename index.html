@@ -6,9 +6,8 @@
 	<title>JSCS config generator</title>
 	<link rel="stylesheet" href="dist/build.css">
 	<link rel="stylesheet" href="css/flaticons/flaticon.css">
-	<script src="dist/build.js"></script>
 </head>
-<body>
+<body class="js-app">
 	<div class="navbar navbar-inverse navbar-fixed-top" role="navigation">
 		<div class="container">
 			<div class="navbar-header">
@@ -25,91 +24,9 @@
 	</div>
 
 	<div class="container">
-		<div class="swiper-container">
-			<div class="swiper-wrapper js-app">
-				<!-- CARD -->
-				<div class="card swiper-slide">
-					<h2 class="card__title js-fit-text"><span>requireCurlyBraces</span></h2>
-					<p>Requires curly braces after statements.</p>
-
-					<div class="counter">
-						<span class="counter__idx">1</span>/<span>27</span>
-					</div>
-
-					<div class="example">
-						<div class="example__item example__item_valid well">
-							<div class="example__label example__label_valid"><i title="Valid" class="flaticon-check52"></i></div>
-							<pre class="example__code">if (x) {
-	x++;
-}</pre>
-					</div>
-						<div class="example__item example__item_invalid well">
-							<div class="example__label example__label_invalid"><i title="Invalid" class="flaticon-do10"></i></div>
-							<pre class="example__code">if (x) x++;</pre>
-						</div>
-					</div>
-
-					<div class="values well">
-						<h2 class="values__title">Values 
-							<span class="values__controls">
-								<span class="values__control">check all</span> / 
-								<span class="values__control">uncheck all</span>
-							</span>
-						</h2>
-						<ul class="values__list">
-							<li class="value js-value" data-toggle="value_unchecked">if</li>
-							<li class="value js-value" data-toggle="value_unchecked">else</li>
-						</ul>
-					</div>
-
-					<p>
-						<span class="btn btn-default card__button card__button_type_skip">Skip it</span>
-						<span class="btn btn-default card__button card__button_type_add">Add this rule</span>
-					</p>
-				</div>
-				<!-- / CARD -->
-
-				<!-- CARD -->
-				<div class="card swiper-slide">
-					<h2 class="card__title js-fit-text"><span>requireCurlyBraces</span></h2>
-					<p>Requires curly braces after statements.</p>
-
-					<div class="counter">
-						<span class="counter__idx">2</span>/<span>27</span>
-					</div>
-
-					<div class="example">
-						<div class="example__item example__item_valid well">
-							<div class="example__label example__label_valid"><i title="Valid" class="flaticon-check52"></i></div>
-							<pre class="example__code">if (x) {
-	x++;
-}</pre>
-					</div>
-						<div class="example__item example__item_invalid well">
-							<div class="example__label example__label_invalid"><i title="Invalid" class="flaticon-do10"></i></div>
-							<pre class="example__code">if (x) x++;</pre>
-						</div>
-					</div>
-
-					<div class="values well">
-						<h2 class="values__title">Values 
-							<span class="values__controls">
-								<span class="values__control">check all</span> / 
-								<span class="values__control">uncheck all</span>
-							</span>
-						</h2>
-						<ul class="values__list">
-							<li class="value js-value" data-toggle="value_unchecked">if</li>
-							<li class="value js-value" data-toggle="value_unchecked">else</li>
-						</ul>
-					</div>
-
-					<p>
-						<span class="btn btn-default card__button card__button_type_skip">Skip it</span>
-						<span class="btn btn-default card__button card__button_type_add">Add this rule</span>
-					</p>
-				</div>
-				<!-- / CARD -->
+		<div class="swiper-container js-swiper">
+			<div class="swiper-wrapper js-rules">
+				<!-- rules -->
 			</div>
 		</div>
 	</div>
@@ -169,19 +86,14 @@
 	</div>
 	</script>
 
-	<script>
+	<script src="dist/build.js"></script>
+	<!--script>
 	jQuery(function() {
-		$('.js-fit-text').textfill({
-			minFontPixels: 10,
-			maxFontPixels: 28,
-			widthOnly: true
-		});
-
 		$('.js-value').click(function() {
 			var _this = $(this);
 			_this.toggleClass(_this.data('toggle'));
 		});
 	});
-	</script>
+	</script-->
 </body>
 </html>
